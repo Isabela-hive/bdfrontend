@@ -1,0 +1,110 @@
+@import 'config';
+@import 'nav';
+@import 'home';
+
+.main {
+  > .head {
+    position: fixed;
+    z-index: 3;
+    margin: 15px;
+
+    font-family: allaina-medium;
+    font-size: 20px;
+    letter-spacing: 2px;
+    text-shadow: $black 0 0 10px1;
+  }
+  > .search-toggle {
+    @include searchIcon;
+    @extend .head;
+    right: 50px;
+    width: 40px;
+    height: 30px;
+    // transform: rotate(20deg) translateY(5px);
+    transition: 0.5s ease-in-out;
+    cursor: pointer;
+  }
+  > .menu-toggle {
+    @include flex(column, center, center);
+    @extend .head;
+    right: 0;
+    width: 40px;
+    height: 30px;
+    transition: 0.5s ease-in-out;
+    cursor: pointer;
+    z-index: 3;
+
+    text-shadow: $black 0 0 10px;
+    &:hover {
+      transform: rotateZ(10deg);
+    }
+    // background: yellow;
+    .burger {
+      position: absolute;
+      height: 2px;
+      background-color: $white;
+      margin: 5px 0;
+      width: 40px;
+
+      cursor: pointer;
+      transition: 0.5s ease-in-out;
+      &::before {
+        content: '';
+        position: absolute;
+        height: 2px;
+        top: -10px;
+        width: 40px;
+        background-color: $white;
+      }
+      &::after {
+        content: '';
+        position: absolute;
+        height: 2px;
+        bottom: -10px;
+        width: 26px;
+        background-color: $white;
+      }
+
+      &.close {
+        transform: rotate(720deg) translateX(10px);
+        background-color: transparent;
+        &::before {
+          content: '';
+          position: absolute;
+          height: 2px;
+          top: -10px;
+          width: 40px;
+          background-color: $white;
+          transform: rotate(45deg) translateY(12px);
+        }
+        &::after {
+          content: '';
+          position: absolute;
+          height: 2px;
+          bottom: -10px;
+          width: 40px;
+          background-color: $white;
+          transform: rotate(-45deg) translateY(-15px);
+        }
+      }
+    }
+  }
+  > .updown {
+    z-index: 2;
+    position: fixed;
+    right: 20px;
+    width: 50px;
+    height: 50vh;
+    top: 50%;
+    transform: translateY(-50%);
+    // background: green;
+    @include flex(column, center, space-evenly);
+    > * {
+      cursor: pointer;
+      color: white;
+    }
+  }
+  > .navi {
+    z-index: 2;
+    position: absolute;
+  }
+}

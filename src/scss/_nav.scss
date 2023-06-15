@@ -1,0 +1,112 @@
+.navbar {
+  @include exactSize(100vh, 100vw);
+  overflow: hidden;
+  position: relative;
+  & > .media-container {
+    position: absolute;
+    top: 0;
+  }
+  & > .media-container > * {
+    @include exactSize(100vh, 100vw);
+    object-fit: cover;
+    position: absolute;
+  }
+  & .top-black,
+  & .bottom-black {
+    background-color: $black;
+    width: 130vw;
+    height: 130vh;
+    position: absolute;
+    box-shadow: $black 0 0 60px;
+  }
+
+  & .top-black {
+    bottom: 100vh;
+    left: -10vh;
+  }
+  & .bottom-black {
+    top: 100vh;
+    left: -10vh;
+  }
+
+  & .left-black,
+  & .right-black {
+    background-color: $black;
+    width: 150vw;
+    height: 330vh;
+    position: absolute;
+    top: -150vh;
+    box-shadow: $black 0 0 60px;
+  }
+
+  & .left-black {
+    right: 100vw;
+  }
+
+  & .right-black {
+    left: 100vw;
+  }
+
+  & * {
+    color: $white;
+  }
+
+  & > .content {
+    position: absolute;
+    @include exactSize(100vh, 100vw);
+    // transform: translate(-50%, -50%);
+    z-index: 3;
+    @include flex(column, center, center);
+    opacity: 0;
+    background: transparentize($color: $black, $amount: 0.3);
+
+    .menu-item {
+      @include flex(column, center, center);
+      opacity: 0;
+      margin: 20px 0;
+      &:hover {
+        .label {
+          letter-spacing: 15px;
+          &::after {
+            content: "";
+            transition: 0.5s ease-in-out;
+            position: absolute;
+            right: -10px;
+            bottom: 20px;
+            transform: translateY(-50%);
+            background-color: $white;
+            @include exactSize(10px, 10px);
+            border-radius: 50%;
+          }
+          &::before {
+            content: "";
+            content: "";
+            transition: 0.5s ease-in-out;
+            position: absolute;
+            left: -25px;
+            bottom: 20px;
+            transform: translateY(-50%);
+            background-color: $white;
+            @include exactSize(10px, 10px);
+            border-radius: 50%;
+          }
+        }
+      }
+      .label {
+        font-family: allaina-medium;
+        text-transform: uppercase;
+        font-size: 40px;
+        letter-spacing: 5px;
+        transition: 0.5s ease-in-out;
+      }
+      .number {
+        letter-spacing: 5px;
+        font-size: 20px;
+        // margin: 10px;
+        &::after {
+          content: ".";
+        }
+      }
+    }
+  }
+}

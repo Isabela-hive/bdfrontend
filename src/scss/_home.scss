@@ -1,0 +1,99 @@
+.home {
+  top: 0;
+  position: fixed;
+  @include exactSize(100vh, 100vw);
+  @include flex(column, center, center);
+  > .background {
+    position: absolute;
+    @include exactSize(100vh, 100vw);
+    object-fit: cover;
+    object-position: center;
+    z-index: -1;
+  }
+  > .content {
+    @include exactSize(100vh, 100vw);
+    @include flex(colum, center, center);
+    background-color: transparentize($color: $black, $amount: 0.1);
+    mix-blend-mode: hard-light;
+    position: relative;
+    // box-shadow: inset $black 0 0 100px;
+  }
+  .large-letter {
+    font-size: calc((100vh + 100vw) / 4);
+    // font-family: "Times New Roman", Times, serif;
+    background-color: gray;
+    background-clip: text;
+    color: transparentize($color: $white, $amount: 1);
+    font-family: allaina-regular;
+    position: absolute;
+    opacity: 1;
+
+    // backdrop-filter: blur(10px);
+    // text-shadow: transparentize($black, 0.5) 0 0 10px;
+  }
+  .main-letters {
+    color: transparentize($white, 0.3);
+    // font-family: allaina-medium;
+    font-size: calc((100vw + 100vh) / 34);
+    text-transform: uppercase;
+    letter-spacing: calc((100vw + 100vh) / 100);
+    z-index: 2;
+    text-shadow: 0 0 10px $black;
+    font-family: bold;
+    text-overflow: clip;
+    text-align: center;
+  }
+  .top-title {
+    color: $white;
+    text-transform: uppercase;
+    font-size: 16px;
+    letter-spacing: 5px;
+    position: absolute;
+    top: 10px;
+    left: 50vw;
+    margin: 30px;
+    transform: translateX(-50%);
+  }
+  .bottom-title {
+    @include flex(column, center, center);
+    color: $white;
+    text-transform: uppercase;
+    font-size: 16px;
+    letter-spacing: 5px;
+    position: absolute;
+    bottom: 10px;
+    left: 50vw;
+    margin: 20px;
+    transform: translateX(-50%);
+    cursor: pointer;
+    > .icon {
+      @include flex(column, center, center);
+      border-radius: 50%;
+      border: solid 1.6px $white;
+      width: 60px;
+      height: 60px;
+      margin: 16px;
+      transition: 0.5s ease-in-out;
+      svg {
+        transition: 0.5s ease-in-out;
+        background-color: gray;
+        background-clip: text;
+      }
+      &:hover {
+        color: gray;
+        background-color: $white;
+        border: solid 1.6px $white;
+        mix-blend-mode: hard-light;
+        box-shadow: $white 0 0 10px;
+
+        // transform: rotate(-360deg);
+        svg {
+          background-color: gray;
+          transform: scale(1.8) translateY(50%);
+          background-clip: text;
+          // color: brown;
+        }
+      }
+    }
+  }
+}

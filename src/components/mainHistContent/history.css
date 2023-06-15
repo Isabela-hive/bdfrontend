@@ -1,0 +1,106 @@
+.history > * {
+  object-fit: cover;
+  /* position: absolute; */
+}
+
+.history > .content {
+  color: #ffffff;
+  padding: 34px 0px 0px 0px;
+  width: 200px;
+}
+
+.history > .content > .title {
+  padding: 0;
+  margin: 0 0 0 30px;
+  font-size: 40px;
+}
+
+.history > .content > .carousel {
+  min-width: calc(100vw - 80px);
+  max-width: calc(100vw - 80px);
+
+  height: 68vh;
+  position: relative;
+  /* background: var(--black); */
+  box-shadow: var(--default) 0 0 100px;
+  margin: -30px auto;
+  border-radius: 20px;
+}
+
+.history > .content > .carousel > .items {
+  min-width: calc(100vw - 60px);
+  max-width: calc(100vw - 60px);
+}
+
+.history > .content > .carousel > .items > .item {
+  max-width: calc(100vw - 80px);
+  max-height: 60vh;
+  overflow: hidden;
+  border-radius: 20px;
+}
+
+.history > .content > .carousel > .items > .item > .media {
+  min-width: calc(100vw - 60px);
+  min-height: 60vh;
+  max-width: calc(100vw - 60px);
+  max-height: 60vh;
+  object-fit: cover;
+}
+
+.history > .content > .carousel > .items > .item > .label {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  left: 20px;
+  bottom: 80px;
+  background: #ffffff;
+  box-shadow: #000000 0 0 30px, inset #000000 0 0 100px;
+  border-radius: 5px;
+  padding: 5px;
+}
+
+.history > .content > .carousel > .items > .item > .label > .title {
+  color: #000000;
+  font-size: 30px;
+}
+
+.history > .content > .carousel > .items > .item > .label > .description {
+  background: #000000;
+  padding: 5px;
+  border-radius: 0 0 5px 5px;
+  font-size: 12px;
+  color: transparentize(#ffffff, 0.4);
+}
+
+.history > .content > .carousel > .selectors {
+  display: flex;
+  position: absolute;
+  width: fit-content;
+  height: fit-content;
+  left: 50%;
+  bottom: 10px;
+  transform: translateX(-50%);
+}
+
+.history > .content > .carousel > .selectors > .sel {
+  width: 44px;
+  height: 44px;
+  margin: 5px;
+  background: #000000;
+  cursor: pointer;
+  box-shadow: #ffffff 0 0 10px;
+  border-radius: 5px;
+}
+
+.history > .content > .carousel > .selectors > .sel > img {
+  height: 40px;
+  width: 40px;
+  margin: 2px;
+  border-radius: 3px;
+  object-fit: cover;
+  pointer-events: none;
+}
+
+.history > .content > .carousel > .selectors > .sel.act {
+  background: #ffffff;
+}

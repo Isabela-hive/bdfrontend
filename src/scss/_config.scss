@@ -1,0 +1,99 @@
+$black: #000000;
+$white: #ffffff;
+$accr: #853633;
+$accb: #114c67;
+$accg: #0c360c;
+$background: rgb(71, 61, 45);
+
+@function transparency($color, $value) {
+  @return rgba($color, $value);
+}
+
+@font-face {
+  font-family: light;
+  src: url(../fonts/light.woff);
+}
+@font-face {
+  font-family: medium;
+  src: url(../fonts/medium.woff);
+}
+@font-face {
+  font-family: semibold;
+  src: url(../fonts/semibold.woff);
+}
+@font-face {
+  font-family: regular;
+  src: url(../fonts/regular.woff);
+}
+
+@font-face {
+  font-family: allaina-regular;
+  src: url(../fonts/allaina/regular.ttf);
+}
+@font-face {
+  font-family: allaina-medium;
+  src: url(../fonts/allaina/medium.ttf);
+}
+
+* {
+  font-family: light;
+  // color: $white;
+}
+a {
+  text-decoration: none;
+  color: $white;
+}
+
+body {
+  // background-color: var(--default);
+  background: $accb;
+  height: 100vh;
+  width: 100vw;
+  box-sizing: border-box;
+  margin: 0;
+
+  flex-direction: column;
+}
+
+@mixin flex($direction, $alignItems, $justifyContent) {
+  display: flex;
+  align-items: $alignItems;
+  justify-content: $justifyContent;
+  flex-direction: $direction;
+}
+
+@mixin exactSize($height, $width) {
+  min-height: $height;
+  max-height: $height;
+  min-width: $width;
+  max-width: $width;
+}
+
+@mixin easentransition($duration: 0.5s, $ease: ease-in-out) {
+  transition: $duration $ease;
+}
+
+@mixin searchIcon() {
+  transform: rotate(30deg) translateY(6px);
+  ::before {
+    content: '';
+    position: absolute;
+    border-radius: 50%;
+    min-width: 20px;
+    min-height: 20px;
+    border: solid $white 2px;
+    top: 0;
+    left: 0;
+    // background-color: blue;
+  }
+  ::after {
+    content: '';
+    position: absolute;
+    height: 2px;
+    width: 10px;
+    background-color: $white;
+    // transform: rotate(20deg);
+    left: 24px;
+    top: 10px;
+  }
+}
