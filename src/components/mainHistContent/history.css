@@ -16,9 +16,8 @@
 }
 
 .history > .content > .carousel {
-  min-width: calc(100vw - 80px);
-  max-width: calc(100vw - 80px);
-
+  /* width: 100%; */
+  width: 80vw;
   height: 68vh;
   position: relative;
   /* background: var(--black); */
@@ -33,10 +32,11 @@
 }
 
 .history > .content > .carousel > .items > .item {
-  max-width: calc(100vw - 80px);
+  width: 80vw;
   max-height: 60vh;
   overflow: hidden;
   border-radius: 20px;
+  margin-top: -50px;
 }
 
 .history > .content > .carousel > .items > .item > .media {

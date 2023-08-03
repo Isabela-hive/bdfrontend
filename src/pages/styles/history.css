@@ -1,6 +1,7 @@
 .home-wrapper {
   max-width: 1200px;
   margin: 50px auto;
+  height: 100vh;
 }
 .hist-home {
   display: flex;

@@ -11,6 +11,8 @@ import GamePage from './components/mainHistContent/sportsCulture/gamePage';
 import About from './pages/About';
 import NotFound from './components/not-found';
 import History from './pages/History';
+import Tours from './pages/Tours';
+
 import Leadership from './pages/Leadership';
 
 function App() {
@@ -89,7 +91,7 @@ function App() {
           <Route exact path="/about" element={<About />} />
           <Route exact path="/history" element={<History />} />
           <Route exact path="/leadership" element={<Leadership />} />
-          {/* <Route exact path="/education" element={<Education />} /> */}
+          <Route exact path="/tours" element={<Tours />} />
           <Route path="/history/sports/:id" element={<GamePage />} />
 
           <Route exact path="/*" element={<NotFound />} />

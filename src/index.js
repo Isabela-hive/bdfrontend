@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import './index.css';
 
 import App from './App';
+import Tours from './pages/Tours';
 
 ReactDOM.render(
   <React.StrictMode>

@@ -30,7 +30,8 @@ const Gallery = () => {
   const galleryData = [
     {
       image: 'static/luhyamum.jpg',
-      description: 'Description 1',
+      description:
+        'Getting rich is just a strtaegy. Well one thing i know is that I will engage in business. I agree  i messed up but well they say in every mistake or downfall experience becomes part of  you',
     },
     {
       image: 'static/luhyalady.jpg',
@@ -39,7 +40,8 @@ const Gallery = () => {
     },
     {
       image: 'static/luhyachildren.jpg',
-      description: 'Description 3',
+      description:
+        'A beautiful island for budaangi people. Hye isabellah, do you wnna come out and dnce with me tonight ',
       //   isLarge: true,
     },
     {

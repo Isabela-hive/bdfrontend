@@ -139,3 +139,90 @@ const Leadership = () => {
 };
 
 export default Leadership;
+
+// import React, { useState, useEffect } from 'react';
+// import './styles/lead.css';
+// import { NavLink, useHistory } from 'react-router-dom';
+
+// const carouselData = [
+//   // carousel data here...
+// ];
+
+// const Carousel = () => {
+//   const [currentImageIndex, setCurrentImageIndex] = useState(0);
+//   const [intervalId, setIntervalId] = useState(null);
+//   const history = useHistory();
+
+//   useEffect(() => {
+//     const id = setInterval(() => {
+//       setCurrentImageIndex((prevIndex) =>
+//         prevIndex === carouselData.length - 1 ? 0 : prevIndex + 1
+//       );
+//     }, 10000);
+
+//     setIntervalId(id);
+
+//     return () => {
+//       clearInterval(intervalId);
+//     };
+//   }, []);
+
+//   const handlePrevClick = () => {
+//     clearInterval(intervalId);
+//     setCurrentImageIndex((prevIndex) =>
+//       prevIndex === 0 ? carouselData.length - 1 : prevIndex - 1
+//     );
+//   };
+
+//   const handleNextClick = () => {
+//     clearInterval(intervalId);
+//     setCurrentImageIndex((prevIndex) =>
+//       prevIndex === carouselData.length - 1 ? 0 : prevIndex + 1
+//     );
+//   };
+
+//   const handleReadMoreClick = (readMoreLink, title) => {
+//     const formattedTitle = title.replace(/\s+/g, '-').toLowerCase(); // Format title as URL-friendly
+//     const url = `${readMoreLink}/${formattedTitle}`; // Append formatted title to the readMoreLink
+//     history.push(url); // Navigate to the specified URL
+//   };
+
+//   return (
+//     <div className="carousel">
+//       {/* Carousel content here... */}
+//     </div>
+//   );
+// };
+
+// const Leadership = () => {
+//   return (
+//     <div className="Leadership">
+//       <div className="title">
+//         {/* Title and navigation code here... */}
+//       </div>
+
+//       <Carousel />
+
+//       {carouselData.map((item, index) => (
+//         <div key={item.id} className="carousel-item">
+//           {/* Main Image */}
+//           <h2>{item.title}</h2>
+//           <img src={item.image} alt={item.title} />
+//           <a
+//             href={item.readMoreLink}
+//             target="_blank"
+//             rel="noopener noreferrer"
+//             onClick={() => handleReadMoreClick(item.readMoreLink, item.title)}
+//           >
+//             <i className="fas fa-arrow-right" style={{ color: 'black', fontSize: '26px' }}></i>{' '}
+//             <p>
+//               {item.description} <i>Read More</i>
+//             </p>
+//           </a>
+//         </div>
+//       ))}
+//     </div>
+//   );
+// };
+
+// export default Leadership;

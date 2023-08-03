@@ -1,0 +1,27 @@
+{
+  "randomImage": [
+    "static/wrestling.jpg",
+    "static/africastudents.jpg",
+    "static/luhyamum.jpg"
+  ],
+  "randomPlace": {
+    "title": "Random Place",
+    "rating": 4.5,
+    "likes": 100,
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    "destinations": [
+      {
+        "name": "Destination 1",
+        "image": "static/luhyalady.jpg"
+      },
+      {
+        "name": "Destination 2",
+        "image": "static/luhyachildren.jpg"
+      },
+      {
+        "name": "Destination 3",
+        "image": "static/luhyamum.jpg"
+      }
+    ]
+  }
+}

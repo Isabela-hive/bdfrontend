@@ -136,18 +136,13 @@ function Navbar({ menuOpen, triggerClose, closeMenu, navMedia }) {
           <div className="label">Home Page</div>
         </NavLink>
 
-        <NavLink key="nav2" media="history" className="menu-item" to="/history">
+        <NavLink key="nav2" media="tours" className="menu-item" to="/tours">
           <div className="number">02</div>
-          <div className="label">History</div>
+          <div className="label">Tours</div>
         </NavLink>
-        <NavLink
-          key="nav3"
-          media="education"
-          className="menu-item"
-          to="/education"
-        >
+        <NavLink key="nav3" media="history" className="menu-item" to="/history">
           <div className="number">03</div>
-          <div className="label">Education</div>
+          <div className="label">History</div>
         </NavLink>
         <NavLink
           key="nav4"
